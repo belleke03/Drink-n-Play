@@ -86,6 +86,7 @@
         }
         .home-button { left: 20px; }
         .translate-button { left: 120px; }
+        .translate-button:nth-child(3) { left: 230px; }
         .home-button:hover, .translate-button:hover {
             background-color: rgba(255, 204, 0, 0.2);
         }
@@ -96,28 +97,69 @@
     </style>
     <script>
         function translatePage(language) {
-            const elements = document.querySelectorAll('.rules ul li');
             const translations = {
-                en: [
-                    "Jumpscare", "Ghost hunt", "Voodoo or monkey paw", "Photo of the ghost", "If it's a 'shitty' map", "Guessing the cursed object correctly", "A perfect run", "Incorrect ghost guess", "Typical ghost evidence", "The ghost is a Mimic", "Guessing the ghost correctly with only 1 piece of evidence", "Wrong room", "Forgot the bone", "Death", "Forgot to put the headgear on", "Blood moon event"
-                ],
-                nl: [
-                    "Jumpscare", "Ghost hunt", "Voodoo of monkey paw", "Foto van de ghost", "Als het een 'kut' map is", "Het cursed object goed raden", "Een perfecte run", "De ghost verkeerd geraden", "Typisch ghost evidence", "De ghost is een Mimic", "Met 1 stuk bewijs de ghost goed geraden", "Verkeerde kamer", "Geen bot gevonden", "Dood", "Vergeten de headgear op te zetten", "Bloodmoon evenement"
-                ]
+                en: {
+                    title: "Phasmophobia Drinking Game",
+                    header: "Phasmophobia",
+                    appendixTitle: "How many sips?",
+                    rules: [
+                        "Jumpscare", "Ghost hunt", "Voodoo or monkey paw", "Photo of the ghost",
+                        "If it's a 'shitty' map", "Guessing the cursed object correctly", "A perfect run",
+                        "Incorrect ghost guess", "Typical ghost evidence", "The ghost is a Mimic",
+                        "Guessing the ghost correctly with only 1 piece of evidence", "Wrong room",
+                        "Forgot the bone", "Death", "Forgot to put the headgear on", "Blood moon event"
+                    ],
+                    sips: [
+                        "1 Sip - Blue", "2 Sips - Green", "3 Sips - Orange", "5 Sips - Red"
+                    ],
+                    home: "Home",
+                    dutch: "Dutch",
+                    english: "English"
+                },
+                nl: {
+                    title: "Phasmophobia Drinkspel",
+                    header: "Phasmophobia",
+                    appendixTitle: "Hoeveel slokken?",
+                    rules: [
+                        "Jumpscare", "Ghost hunt", "Voodoo of monkey paw", "Foto van de ghost",
+                        "Als het een 'kut' map is", "Het cursed object goed raden", "Een perfecte run",
+                        "De ghost verkeerd geraden", "Typisch ghost evidence", "De ghost is een Mimic",
+                        "Met 1 stuk bewijs de ghost goed geraden", "Verkeerde kamer",
+                        "Geen bot gevonden", "Dood", "Vergeten de headgear op te zetten", "Bloodmoon evenement"
+                    ],
+                    sips: [
+                        "1 Slok - Blauw", "2 Slokken - Groen", "3 Slokken - Oranje", "5 Slokken - Rood"
+                    ],
+                    home: "Home",
+                    dutch: "Dutch",
+                    english: "English"
+                }
             };
-            elements.forEach((el, index) => {
-                el.innerText = translations[language][index];
+
+            document.title = translations[language].title;
+            document.querySelector('h1').innerText = translations[language].header;
+            document.getElementById("appendix-title").innerText = translations[language].appendixTitle;
+            
+            const rulesElements = document.querySelectorAll('.rules ul li');
+            rulesElements.forEach((el, index) => {
+                el.innerText = translations[language].rules[index];
             });
 
-            const appendixTitle = language === 'nl' ? "Hoeveel slokken?" : "How many sips?";
-            document.getElementById("appendix-title").innerText = appendixTitle;
+            const sipsElements = document.querySelectorAll('.appendix ul li');
+            sipsElements.forEach((el, index) => {
+                el.innerText = translations[language].sips[index];
+            });
+
+            document.querySelector(".home-button").innerText = translations[language].home;
+            document.querySelector(".translate-button:nth-child(2)").innerText = translations[language].dutch;
+            document.querySelector(".translate-button:nth-child(3)").innerText = translations[language].english;
         }
     </script>
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>
     <button class="translate-button" onclick="translatePage('nl')">Dutch</button>
-    <button class="translate-button" onclick="translatePage('en')" style="left: 230px;">English</button>
+    <button class="translate-button" onclick="translatePage('en')">English</button>
     <h1>Phasmophobia</h1>
     <div class="container">
         <div class="rules">

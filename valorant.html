@@ -7,15 +7,15 @@
     <style>
         @font-face {
             font-family: 'Lazy Dog';
-            src: url('lazy_dog.ttf') format('truetype');
+            src: url('fonts/lazy_dog.ttf') format('truetype');
         }
         @font-face {
             font-family: 'Valorant Font';
-            src: url('Valorant Font.ttf') format('truetype');
+            src: url('fonts/Valorant%20Font.ttf') format('truetype');
         }
         body {
             font-family: Arial, sans-serif;
-            background: url('valorantbackground2.jpg') no-repeat center center fixed;
+            background: url('images/valorantbackground2.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             padding: 50px;
@@ -71,10 +71,9 @@
             font-size: 20px;
             text-align: left;
         }
-        .home-button {
+        .home-button, .translate-button {
             position: absolute;
             top: 20px;
-            left: 20px;
             padding: 5px 15px;
             font-size: 16px;
             color: #ff0000;
@@ -85,7 +84,9 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-        .home-button:hover {
+        .home-button { left: 20px; }
+        .translate-button { left: 120px; }
+        .home-button:hover, .translate-button:hover {
             background-color: rgba(255, 0, 0, 0.2);
         }
         .sip-1 { color: #00aaff; }
@@ -94,9 +95,39 @@
         .sip-5 { color: #ff0000; }
         .sip-cup { color: #800080; }
     </style>
+    <script>
+        function translatePage(language) {
+            const elements = document.querySelectorAll('.rules ul li, .appendix ul li, h3');
+            const translations = {
+                en: [
+                    "Death", "12 year old boy", "Someone is AFK in same team", "I have to pee", 
+                    "Instalock duelist who does not enter the site", "Your main agent(s) is picked", "Shit map",
+                    "French teammate", "Bomb not planted or defused", "Game goes in overtime",
+                    "Someone makes a 3k", "Sexist in team", "Top fragger when the game ends",
+                    "Anyone in the game makes a knife kill", "Bottom fragger when the game ends",
+                    "Someone makes an ace (everyone else drinks)",
+                    "How many sips?", "1 Sip - Blue", "2 Sips - Green", "3 Sips - Orange", "5 Sips - Red", "Whole Cup - Purple"
+                ],
+                nl: [
+                    "Dood", "12-jarige jongen", "Iemand is AFK in hetzelfde team", "Ik moet plassen", 
+                    "Instalock duelist die de site niet ingaat", "Jouw hoofdagent(en) is gepakt", "Slechte map",
+                    "Franse teamgenoot", "Bom niet geplant of ontmanteld", "Wedstrijd gaat in overtime",
+                    "Iemand maakt een 3k", "Seksist in team", "Top fragger aan het einde van het spel",
+                    "Iemand in het spel maakt een mes kill", "Laatste fragger wanneer het spel eindigt",
+                    "Iemand maakt een ace (iedereen drinkt)",
+                    "Hoeveel slokken?", "1 Slok - Blauw", "2 Slokken - Groen", "3 Slokken - Oranje", "5 Slokken - Rood", "Hele Beker - Paars"
+                ]
+            };
+            elements.forEach((el, index) => {
+                el.innerText = translations[language][index];
+            });
+        }
+    </script>
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>
+    <button class="translate-button" onclick="translatePage('nl')">Dutch</button>
+    <button class="translate-button" onclick="translatePage('en')" style="left: 230px;">English</button>
     <h1>Valorant</h1>
     <div class="container">
         <div class="rules">
