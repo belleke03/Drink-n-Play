@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Drinking Game</title>
+    <style>
+        @font-face {
+            font-family: 'Burbank';
+            src: url('fonts/BurbankBigCondensedBlack.ttf') format('truetype');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/fnbackground.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        h1 {
+            color: #ff00d4;
+            text-align: center;
+            font-family: 'Burbank', sans-serif;
+            font-size: 64px;
+            margin-top: -20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .rules {
+            width: 50%;
+            border: 2px solid #ff00d4;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            text-align: left;
+            font-family: 'Burbank', sans-serif;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+        .appendix {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border: 2px solid #ff00d4;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            font-family: 'Burbank', sans-serif;
+            font-size: 20px;
+            text-align: left;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 5px 15px;
+            font-size: 16px;
+            color: #ff00d4;
+            background-color: transparent;
+            border: 1px solid #ff00d4;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: rgba(255, 204, 0, 0.2);
+        }
+        .sip-1 { color: #00aaff; }
+        .sip-2 { color: #00ff00; }
+        .sip-3 { color: #ff9900; }
+        .sip-5 { color: #ff0000; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <h1>Fortnite Drinking Game</h1>
+    <div class="container">
+        <div class="rules">
+            <ul>
+                <li class="sip-1">under maintenance</li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="appendix">
+        <h3>under maintenance</h3>
+        <ul>
+            <li class="sip-1">under maintenance</li>
+            
+        </ul>
+    </div>
+</body>
+</html>
