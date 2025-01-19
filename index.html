@@ -13,7 +13,7 @@
             padding: 50px;
         }
         h1 {
-            color: #ffcc00;
+            color: #ffffff;
         }
         .game-container {
             display: flex;
@@ -31,14 +31,23 @@
             cursor: pointer;
             text-decoration: none;
             text-align: center;
-            line-height: 200px;
-            font-size: 32px;
-            font-weight: bold;
-            color: #ffffff;
+            position: relative;
             transition: transform 0.3s ease;
         }
         .game-button:hover {
             transform: scale(1.05);
+        }
+        .game-button .text-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 50px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
         .phasmophobia {
             background-image: url('images/phasmobackground.jpg');
@@ -49,11 +58,15 @@
     </style>
 </head>
 <body>
-    <h1>test</h1>
-    <p>test</p>
+    <h1>Drink & Play</h1>
+    <p>Choose your game</p>
     <div class="game-container">
-        <a href="phasmophobia.html" class="game-button phasmophobia">Phasmophobia</a>
-        <a href="valorant.html" class="game-button valorant">Valorant</a>
+        <a href="phasmophobia.html" class="game-button phasmophobia">
+            <div class="text-overlay">Phasmophobia</div>
+        </a>
+        <a href="valorant.html" class="game-button valorant">
+            <div class="text-overlay">Valorant</div>
+        </a>
     </div>
 </body>
 </html>
