@@ -38,7 +38,8 @@
             color: #ff0000;
             text-align: center;
             font-family: 'Valorant Font', sans-serif;
-            font-size: 64px;
+            font-size: 80px;
+            margin-top: -30px;
         }
         .container {
             display: flex;
@@ -57,6 +58,19 @@
             font-size: 24px;
             line-height: 1.2;
         }
+        .appendix {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            font-family: 'Valorant Font', sans-serif;
+            font-size: 20px;
+            text-align: left;
+        }
         .home-button {
             position: absolute;
             top: 20px;
@@ -74,6 +88,11 @@
         .home-button:hover {
             background-color: rgba(255, 0, 0, 0.2);
         }
+        .sip-1 { color: #00aaff; }
+        .sip-2 { color: #00ff00; }
+        .sip-3 { color: #ff9900; }
+        .sip-5 { color: #ff0000; }
+        .sip-cup { color: #800080; }
     </style>
 </head>
 <body>
@@ -82,24 +101,34 @@
     <div class="container">
         <div class="rules">
             <ul>
-                <li>Elke death</li>
-                <li>3k beide 2 slok</li>
-                <li>Ace hele beker leeg voor ander, degene die aced 3 slok</li>
-                <li>Frans beide 1 slok</li>
-                <li>Sexist beide 1 slok</li>
-                <li>Klein kind beide 1 slok</li>
-                <li>Bom niet gepland/defused beide 1 slok</li>
-                <li>AFK ons team</li>
-                <li>Knife kill</li>
-                <li>Plasse = 1 slok</li>
-                <li>'Overtime' 2 slok</li>
-                <li>Instalock duelist die niet enterd</li>
-                <li>Als je main wordt geinsta locked</li>
-                <li>Kut map</li>
-                <li>Bottom frag 5 slokken</li>
-                <li>Top frag 2 slokken</li>
+                <li class="sip-1">Death</li>
+                <li class="sip-1">12 year old boy</li>
+                <li class="sip-1">Someone is AFK in same team</li>
+                <li class="sip-1">I have to pee</li>
+                <li class="sip-1">Instalock duelist who does not enter the site</li>
+                <li class="sip-1">Your main agent(s) is picked</li>
+                <li class="sip-1">Shit map</li>
+                <li class="sip-2">French teammate</li>
+                <li class="sip-2">Bomb not planted or defused</li>
+                <li class="sip-2">Game goes in overtime</li>
+                <li class="sip-3">Someone makes a 3k</li>
+                <li class="sip-3">Sexist in team</li>
+                <li class="sip-3">Top fragger when the game ends</li>
+                <li class="sip-5">Anyone in the game makes a knife kill</li>
+                <li class="sip-5">Bottom fragger when the game ends</li>
+                <li class="sip-cup">Someone makes an ace (everyone else drinks)</li>
             </ul>
         </div>
+    </div>
+    <div class="appendix">
+        <h3>How many sips?</h3>
+        <ul>
+            <li class="sip-1">1 Sip - Blue</li>
+            <li class="sip-2">2 Sips - Green</li>
+            <li class="sip-3">3 Sips - Orange</li>
+            <li class="sip-5">5 Sips - Red</li>
+            <li class="sip-cup">Whole Cup - Purple</li>
+        </ul>
     </div>
 </body>
 </html>
