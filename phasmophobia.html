@@ -7,15 +7,15 @@
     <style>
         @font-face {
             font-family: 'Lazy Dog';
-            src: url('lazy_dog.ttf') format('truetype');
+            src: url('fonts/lazy_dog.ttf') format('truetype');
         }
         @font-face {
             font-family: 'October Crow';
-            src: url('October Crow.ttf') format('truetype');
+            src: url('fonts/October Crow.ttf') format('truetype');
         }
         body {
             font-family: Arial, sans-serif;
-            background: url('phasmobackground.jpg') no-repeat center center fixed;
+            background: url('images/phasmobackground.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             padding: 50px;
@@ -99,7 +99,7 @@
             const elements = document.querySelectorAll('.rules ul li');
             const translations = {
                 en: [
-                    "Jumpscare", "Ghost hunt", "Voodoo or monkey paw", "Photo of the ghost", "If it's a 'shitty' map", "Guessing the cursed object correctly", "A perfect run", "Incorrect ghost guess", "Typical ghost evidence", "The ghost is a Mimic", "Guessing the ghost correctly with only 1 piece of evidence", "Wrong room", "Forgot the bone", "Death", "Forgot to put the headgear on", "Blood moon event,"
+                    "Jumpscare", "Ghost hunt", "Voodoo or monkey paw", "Photo of the ghost", "If it's a 'shitty' map", "Guessing the cursed object correctly", "A perfect run", "Incorrect ghost guess", "Typical ghost evidence", "The ghost is a Mimic", "Guessing the ghost correctly with only 1 piece of evidence", "Wrong room", "Forgot the bone", "Death", "Forgot to put the headgear on", "Blood moon event"
                 ],
                 nl: [
                     "Jumpscare", "Ghost hunt", "Voodoo of monkey paw", "Foto van de ghost", "Als het een 'kut' map is", "Het cursed object goed raden", "Een perfecte run", "De ghost verkeerd geraden", "Typisch ghost evidence", "De ghost is een Mimic", "Met 1 stuk bewijs de ghost goed geraden", "Verkeerde kamer", "Geen bot gevonden", "Dood", "Vergeten de headgear op te zetten", "Bloodmoon evenement"
@@ -108,6 +108,9 @@
             elements.forEach((el, index) => {
                 el.innerText = translations[language][index];
             });
+
+            const appendixTitle = language === 'nl' ? "Hoeveel slokken?" : "How many sips?";
+            document.getElementById("appendix-title").innerText = appendixTitle;
         }
     </script>
 </head>
@@ -139,7 +142,7 @@
         </div>
     </div>
     <div class="appendix">
-        <h3>How many sips?</h3>
+        <h3 id="appendix-title">How many sips?</h3>
         <ul>
             <li class="sip-1">1 Sip - Blue</li>
             <li class="sip-2">2 Sips - Green</li>
