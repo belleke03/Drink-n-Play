@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Drinking Game</title>
+    <style>
+        @font-face {
+            font-family: 'Lazy Dog';
+            src: url('lazy_dog.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Valorant Font';
+            src: url('Valorant Font.ttf') format('truetype');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('valorantbackground2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            font-family: 'Valorant Font', sans-serif;
+            font-size: 64px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .rules {
+            width: 50%;
+            border: 2px solid #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            text-align: left;
+            font-family: 'Valorant Font', sans-serif;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 5px 15px;
+            font-size: 16px;
+            color: #ff0000;
+            background-color: transparent;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <a href="homepage.html" class="home-button">Home</a>
+    <h1>Valorant</h1>
+    <div class="container">
+        <div class="rules">
+            <ul>
+                <li>Elke death</li>
+                <li>3k beide 2 slok</li>
+                <li>Ace hele beker leeg voor ander, degene die aced 3 slok</li>
+                <li>Frans beide 1 slok</li>
+                <li>Sexist beide 1 slok</li>
+                <li>Klein kind beide 1 slok</li>
+                <li>Bom niet gepland/defused beide 1 slok</li>
+                <li>AFK ons team</li>
+                <li>Knife kill</li>
+                <li>Plasse = 1 slok</li>
+                <li>'Overtime' 2 slok</li>
+                <li>Instalock duelist die niet enterd</li>
+                <li>Als je main wordt geinsta locked</li>
+                <li>Kut map</li>
+                <li>Bottom frag 5 slokken</li>
+                <li>Top frag 2 slokken</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

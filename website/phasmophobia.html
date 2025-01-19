@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phasmophobia Drinking Game</title>
+    <style>
+        @font-face {
+            font-family: 'Lazy Dog';
+            src: url('lazy_dog.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'October Crow';
+            src: url('October Crow.ttf') format('truetype');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: url('phasmobackground.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        h1 {
+            color: #ffcc00;
+            text-align: center;
+            font-family: 'October Crow', sans-serif;
+            font-size: 48px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .rules {
+            width: 50%;
+            border: 2px solid #ffcc00;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            text-align: left;
+            font-family: 'Lazy Dog', sans-serif;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+        .appendix {
+            width: 20%;
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(51, 51, 51, 0.7);
+            font-family: 'Lazy Dog', sans-serif;
+            font-size: 24px;
+            text-align: left;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 5px 15px;
+            font-size: 16px;
+            color: #ffcc00;
+            background-color: transparent;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: rgba(255, 204, 0, 0.2);
+        }
+        .sip-1 { color: #00aaff; }
+        .sip-2 { color: #00ff00; }
+        .sip-3 { color: #ff9900; }
+        .sip-5 { color: #ff0000; }
+    </style>
+</head>
+<body>
+    <a href="homepage.html" class="home-button">Home</a>
+    <h1>Phasmophobia</h1>
+    <div class="container">
+        <div class="rules">
+            <ul>
+                <li class="sip-2">If it's a "shitty" map</li>
+                <li class="sip-1">Jumpscare</li>
+                <li class="sip-1">Ghost hunt</li>
+                <li class="sip-5">Death</li>
+                <li class="sip-1">Voodoo or monkey paw</li>
+                <li class="sip-2">Guessing the cursed object correctly</li>
+                <li class="sip-3">The ghost is a Mimic</li>
+                <li class="sip-3">Guessing the ghost correctly with only 1 piece of evidence</li>
+                <li class="sip-1">Photo of the ghost</li>
+                <li class="sip-2">A perfect run</li>
+                <li class="sip-5">Forgot to put the headgear on</li>
+                <li class="sip-3">Wrong room</li>
+                <li class="sip-3">Forgot the bone</li>
+                <li class="sip-2">Incorrect ghost guess</li>
+                <li class="sip-5">Blood moon event</li>
+                <li class="sip-2">Typical ghost evidence</li>
+            </ul>
+        </div>
+        <div class="appendix">
+            <h3>Appendix</h3>
+            <ul>
+                <li class="sip-1">1 Sip - Blue</li>
+                <li class="sip-2">2 Sips - Green</li>
+                <li class="sip-3">3 Sips - Orange</li>
+                <li class="sip-5">5 Sips - Red</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
